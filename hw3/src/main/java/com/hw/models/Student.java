@@ -12,6 +12,7 @@ public class Student {
     )
     private int id;
     private String name;
+    @Column(name="birthday")
     private String birthDay;
     private String address;
     private String gender;
