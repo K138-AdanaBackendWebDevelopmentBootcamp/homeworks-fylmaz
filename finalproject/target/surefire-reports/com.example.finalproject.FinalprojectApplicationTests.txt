@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.example.finalproject.FinalprojectApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.128 s <<< FAILURE! - in com.example.finalproject.FinalprojectApplicationTests
+com.example.finalproject.FinalprojectApplicationTests  Time elapsed: 0.127 s  <<< ERROR!
+java.lang.IllegalStateException: Could not create CacheAwareContextLoaderDelegate [org.springframework.aot.test.AotCacheAwareContextLoaderDelegate]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aot.test.AotCacheAwareContextLoaderDelegate]: Constructor threw exception; nested exception is java.lang.IllegalStateException: Failed to load getContextLoaders() method in org.springframework.aot.TestContextBootstrapInitializer
+Caused by: java.lang.IllegalStateException: Failed to load getContextLoaders() method in org.springframework.aot.TestContextBootstrapInitializer
+Caused by: java.lang.ClassNotFoundException: org.springframework.aot.TestContextBootstrapInitializer
+
