@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>Bootstrap Frontend</title>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -13,101 +11,192 @@
 <body>
 
     <div class="container">
+        <h2>Basic Frontend of Credit Management System</h2>
+    </div>
+
+    <div class="container">
         <h2>Endpoint List</h2>
-        <div class="list-group">
-            <a href="#" class="list-group-item">GET Get all Users</a>
-            <a href="#" class="list-group-item">GET Get Users by ID</a>
-            <a href="#" class="list-group-item">POST Create User</a>
-            <a href="#" class="list-group-item">PUT Update User</a>
-            <a href="#" class="list-group-item">DELETE Delete User by ID</a>
-            <a href="#" class="list-group-item">DELETE Delete User </a>
-        </div>
-    </div>
-
-    <div class="container">
-        <h2>User Endpoints</h2>
-        <div class="list-group">
-            <a href="#" class="list-group-item">GET Apply Credit</a>
-            <a href="#" class="list-group-item">GET Check Credit Status</a>
-        </div>
-    </div>
-
-    <div class="container">
-        <h2>Get All Users</h2>
-        <button type="button" onclick="getAllUsers()" class="btn btn-default">Send Request</button>
-        </form>
-    </div>
-
-
-
-    <div class="container">
-        <h2>Get Users By Id</h2>
-        <div class="form-group">
-            <label for="email">User ID:</label>
-            <input type="email" id="0" class="form-control" placeholder="Enter User ID" name="email">
-        </div>
-        <button type="button" onclick="getUserById()" class="btn btn-default">Submit</button>
-    </div>
-
-    <div class="container">
-        <h2>Create User</h2>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Enter User Body(JSON form)</label>
-            <textarea class="form-control" id="1" rows="8"></textarea>
-        </div>
-        <button type="button" onclick="createUser()" class="btn btn-default">Submit</button>
-    </div>
-
-
-    <div class="container">
-        <h2>Update User</h2>
-        <div class="form-group">
-            <label for="email">User ID:</label>
-            <input type="email class=" form-control" id="2" placeholder="Enter User ID" name="email">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Enter User Body(JSON form)</label>
-            <textarea class="form-control" id="3" rows="8"></textarea>
-        </div>
-        <button type="button" onclick="updateUser()" class="btn btn-default">Submit</button>
-    </div>
-
-    <div class="container">
-        <h2>Delete User By Id</h2>
-            <div class="form-group">
-                <label for="email">User ID:</label>
-                <input type="email" class="form-control" id="4" placeholder="Enter User ID" name="email">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">GET Get All Users</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="container">
+                        <h2>Get All Users</h2>
+                        <button type="button" onclick="getAllUsers()" class="btn btn-default">Send Request</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <button type="button" onclick="deleteUserById()" class="btn btn-default">Submit</button>
+        </div>
     </div>
 
     <div class="container">
-        <h2>Delete User</h2>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Enter User Body(JSON form)</label>
-                <textarea class="form-control" id="5" rows="8"></textarea>
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">GET Get Users By Id</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="container">
+                        <h2>Get Users By Id</h2>
+                        <div class="form-group">
+                            <label for="email">User ID:</label>
+                            <input type="email" id="0" class="form-control" placeholder="Enter User ID" name="email">
+                        </div>
+                        <button type="button" onclick="getUserById()" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
             </div>
-            <button type="button" onclick="deleteUser()" class="btn btn-default">Submit</button>
+        </div>
     </div>
 
     <div class="container">
-        <h2>Apply Credit</h2>
-            <div class="form-group">
-                <label for="email">User ID:</label>
-                <input type="email" class="form-control" id="6" placeholder="Enter User ID" name="email">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse3">POST Create User</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="container">
+                        <h2>Create User</h2>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Enter User Body(JSON form)</label>
+                            <textarea class="form-control" id="1" rows="8"></textarea>
+                        </div>
+                        <button type="button" onclick="createUser()" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
             </div>
-            <button type="button" onclick="applyCredit()" class="btn btn-default">Submit</button>
+        </div>
     </div>
 
     <div class="container">
-        <h2>Check Credit Status</h2>
-            <div class="form-group">
-                <label for="email">User Identity Number:</label>
-                <input type="email" class="form-control" id="7" placeholder="Enter User Identity Number"
-                    name="email">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse4">PUT Update User</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="container">
+                        <h2>Update User</h2>
+                        <div class="form-group">
+                            <label for="email">User ID:</label>
+                            <input type="email class=" form-control" id="2" placeholder="Enter User ID" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Enter User Body(JSON form)</label>
+                            <textarea class="form-control" id="3" rows="8"></textarea>
+                        </div>
+                        <button type="button" onclick="updateUser()" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
             </div>
-            <button type="button" onclick="checkCreditStatus()" class="btn btn-default">Submit</button>
+        </div>
     </div>
+
+    <div class="container">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse5">DELETE Delete User By Id</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="container">
+                        <h2>Delete User By Id</h2>
+                        <div class="form-group">
+                            <label for="email">User ID:</label>
+                            <input type="email" class="form-control" id="4" placeholder="Enter User ID" name="email">
+                        </div>
+                        <button type="button" onclick="deleteUserById()" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse6">DELETE Delete User</a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="container">
+                        <h2>Delete User</h2>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Enter User Body(JSON form)</label>
+                            <textarea class="form-control" id="5" rows="8"></textarea>
+                        </div>
+                        <button type="button" onclick="deleteUser()" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>User Endpoint List</h2>
+    </div>
+    <div class="container">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse7">GET Apply Credit</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="container">
+                        <h2>Apply Credit</h2>
+                        <div class="form-group">
+                            <label for="email">User ID:</label>
+                            <input type="email" class="form-control" id="6" placeholder="Enter User ID" name="email">
+                        </div>
+                        <button type="button" onclick="applyCredit()" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse8">Get Check Credit Status With User Identity
+                            Number</a>
+                    </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                    <div class="container">
+                        <h2>Check Credit Status</h2>
+                        <div class="form-group">
+                            <label for="email">User Identity Number:</label>
+                            <input type="email" class="form-control" id="7" placeholder="Enter User Identity Number"
+                                name="email">
+                        </div>
+                        <button type="button" onclick="checkCreditStatus()" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script>
         function getAllUsers() {
             fetch("http://localhost:8080/users/").then((data) => {
@@ -144,15 +233,17 @@
             let id = document.getElementById("2").value
             let bodyString = document.getElementById("3").value
 
-            fetch("http://localhost:8080/users/", {
+            fetch("http://localhost:8080/users/" + id, {
                 headers: {
 
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
                 method: "PUT",
                 body: bodyString
             }).then((data) => {
-                data.json().then((response) => { document.write(document.write(JSON.stringify(response))) })
+                //data.json().then((response) => { document.write(document.write(JSON.stringify(response))) })
+                document.write("updated")
             }
             )
         }
@@ -176,12 +267,14 @@
 
                 headers: {
 
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
                 method: "DELETE",
                 body: bodyString
             }).then((data) => {
-                data.json().then((response) => { document.write(document.write(JSON.stringify(response))) })
+                //data.json().then((response) => { document.write(document.write(JSON.stringify(response))) })
+                document.write("deleted")
             }
             )
         }
@@ -197,14 +290,27 @@
 
         function checkCreditStatus() {
             let id = document.getElementById("7").value
-            fetch("http://localhost:8080/users/checkCreditStatus/" + id).then((data) => {
+            fetch("http://localhost:8080/users/checkCreditStatus/" + id, {
+                headers: {
+
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+            }).then((data) => {
                 //data.json().then((response) => { document.write(document.write(JSON.stringify(response))) })
-                data.json().then((response) => { document.write(document.write(JSON.stringify(response))) })
+                document.write("Credit amount: ")
             }
             )
         }
 
+
     </script>
+
+
+
+
+
+
 </body>
 
 </html>
